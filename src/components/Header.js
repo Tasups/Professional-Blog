@@ -15,7 +15,7 @@ const Header = () => {
   };
 
   return (
-    <div className="header-wrapper">
+    <div className="header-wrapper container" id="home">
       <Particles
         id="tsparticles"
         init={particlesInit}
@@ -104,11 +104,10 @@ const Header = () => {
         alt="coffee and computer"
       />
       <div className="header-main-info">
-        <h1 className='header-title'>Web Development and Design</h1>
+        <h1 className="header-title">Web Development and Design</h1>
         <Typed
           className="header-typed"
-          strings=
-          {[
+          strings={[
             "Web Development",
             "Web Design",
             "Web Applications",
@@ -118,6 +117,11 @@ const Header = () => {
           backSpeed={55}
           loop
         />
+        <a href="#contacts">
+          <button type="button">
+            CONTACT ME
+          </button>
+        </a>
       </div>
     </div>
   );
