@@ -59,6 +59,12 @@ nav {
   color: var(--primary-orange);
 }
 
+nav button {
+  max-height: 2rem;
+  min-width: 4rem;
+  
+}
+
 @media only screen and (max-width: 600px) {
   nav{
     width: 100vw;
@@ -148,7 +154,9 @@ nav {
 .blogcard {
   width: 60vw;
   display: flex;
+  margin-bottom: 2rem;
   border: 3px solid var(--primary-orange);
+  border-radius: 3px;
 }
 
 .blogcard-thumbnail {
