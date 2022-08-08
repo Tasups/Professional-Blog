@@ -7,19 +7,34 @@
   --primary-dark: #5A5B59;
   --primary-white: #F8F7F3;
   --primary-orange: #FC8B03;
+  --primary-bisque: #ffe4c4;
+  --primary-darkblue: #394d4c;
+  --primary-grey: #363430;
+  --primary-red: #C70039;
 }
 
-/*----------NAVBAR----------*/
+body {
+  width: 100%;
+  height: 100%;
+}
+
+/***************NAVBAR***************/
 
 nav {
   display: flex;
+  position: fixed;
   background-color: var(--primary-dark);
   height: 10vh;
-  width: 100vw;
+  width: 100%;
+  z-index: 2;
 }
 
 .nav-logo {
   color: var(--primary-orange);
+  font-size: 2rem;
+  font-weight: 100;
+  font-family: 'Anybody',
+  cursive;
   margin: auto 1rem;
 }
 
@@ -44,4 +59,61 @@ nav {
 
 .nav-links a:active {
   color: var(--primary-orange);
+}
+
+/*************HEADER*************/
+
+.header-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-top: 10vh;
+  height: 90vh;
+  width: 100%;
+  background-color: var(--primary-grey);
+  justify-content: center;
+}
+
+.header-main-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--primary-white);
+  z-index: 2;
+}
+
+.header-title {
+  font-size: 4rem;
+  margin: 1rem;
+  font-family: 'Anybody',
+  cursive;
+  color: var(--primary-orange);
+}
+
+.header-typed {
+  text-align: center;
+  margin: 3rem;
+  font-size: 3rem;
+}
+
+.header-background-image{
+  background-color: ;
+  height: 90vh;
+  position: absolute;
+}
+
+/*----------PARTICLES----------*/
+
+#tsparticles {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 90vh;
+}
+
+/*----------ABOUT----------*/
+
+.about {
+  background-color: lightblue;
+  z-index: 2 !important;
 }
