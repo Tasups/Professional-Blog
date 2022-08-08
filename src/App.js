@@ -1,11 +1,8 @@
-
 import './App.css';
 
 import Navbar from './components/Navbar';
-import Header from './components/Header';
-import About from './components/About';
+import Main from './components/Main';
 import Contacts from './components/Contacts';
-import Portfolio from './components/Portfolio';
 
 function App() {
   
@@ -13,9 +10,7 @@ function App() {
     <>
       <div className="App">
         <Navbar />
-        <Header />
-        <About />
-        <Portfolio />
+        <Main />
         <Contacts />
       </div>
     </>

@@ -11,7 +11,7 @@
   --primary-darkblue: #394d4c;
   --primary-grey: #363430;
   --primary-red: #C70039;
-  --primary-lightgrey: #E4E6E6;
+  --primary-lightgrey: rgb(240,240,240);
   --primary-lightorange: #FDEDD7;
 }
 
@@ -34,68 +34,29 @@ body {
 
 nav {
   display: flex;
+  justify-content: center;
   position: fixed;
   background-color: var(--primary-dark);
-  min-height: 10vh;
+  min-height: 18vh;
   width: 100vw;
   z-index: 3;
-  justify-content: space-between;
 }
 
 .nav-logo {
-  color: var(--primary-orange);
+  color: white;
   font-size: 2rem;
   font-weight: 100;
   font-family: 'Anybody', cursive;
   margin: auto 2rem;
+  display: flex;
 }
 
-.nav-links {
-  color: var(--primary-white);
-  margin-top: 2rem;
-  margin-left: auto;
-}
-
-.nav-hamburger {
-  display: none;
-}
-
-.nav-hamburger-btn {
-  margin: 1.5rem 1rem 1.5rem auto;
-  background-color: var(--primary-dark);
-}
-
-.nav-hamburger-icon {
-  color: var(--primary-white);
-  padding: 1rem 2rem;
-  min-height: 2rem;
-  min-width: 2rem;
-}
-
-.nav-links a {
-  color: var(--primary-white);
-  font-weight: bold;
-  font-size: 1.2rem;
-  text-decoration: none;
+.nav-logo h1 {
   margin: 1rem;
-  padding-right: 1rem;
 }
 
-.nav-links a:link {
+.blog {
   color: var(--primary-orange);
-}
-
-.nav-links a:visited {
-  color: var(--primary-white);
-}
-
-.nav-links a:hover {
-  color: var(--primary-orange);
-  transition: 0.2s ease-in-out;
-}
-
-.nav-links a:active {
-  color: var(--primary-orange) !important;
 }
 
 @media only screen and (max-width: 600px) {
@@ -146,8 +107,40 @@ nav {
   }
 }
 
+/* MAIN **************************/
 
+.main {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-top: 18vh;
+  min-height: 90vh;
+  width: 100vw;
+  background-color: var(--primary-lightgrey);
+}
 
+.main form{
+  padding: 2rem;
+  margin: 2rem auto;
+  width: 40%;
+}
+
+.main label {
+  align-self: flex-start;
+  padding-left: 2rem;
+}
+
+.main input {
+  color: var(--primary-dark);
+  width: 80%;
+  padding: 0.5rem 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 1.2rem;
+}
 
 /*************HEADER*************/
 
@@ -504,7 +497,7 @@ nav {
 .contacts-wrapper {
   display: flex;
   background-color: var(--primary-dark);
-  min-height: 45vh;
+  max-height: 30vh;
   width: 100vw;
 }
 
@@ -516,7 +509,7 @@ nav {
 .contacts-greeting {
   display: flex;
   flex-direction: column;
-  margin-bottom: 5rem;
+  margin-bottom: 1rem;
 }
 
 .contacts-greeting h2 {
@@ -529,13 +522,12 @@ nav {
   font-family: 'Open Sans', sans-serif;
   font-size: 2.5rem;
   color: var(--primary-orange);
-  margin-bottom: 1rem;
 }
 
 .contact-icon {
   color: var(--primary-orange);
   font-size: 3rem;
-  margin: 1rem;
+  margin: 0 1rem;
 }
 
 .contact-icon:hover {
