@@ -294,7 +294,9 @@ nav button {
 }
 
 .blogarticle-article {
+  margin: 5rem auto;
   font-size: 1.3rem;
+  max-width: 75%;
 }
 
 .blogarticle-article h1 {
