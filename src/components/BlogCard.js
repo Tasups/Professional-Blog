@@ -1,6 +1,12 @@
 import { Link } from 'react-router-dom'
 
 const BlogCard = (props) => {
+  
+  const selectArticle = (id) => {
+    props.handleClick(id)
+    console.log(id)
+  }
+  
   return(
     <section className="blogcard">
       <div className="blogcard-tn-container">
@@ -9,7 +15,7 @@ const BlogCard = (props) => {
       <div className="blogcard-desc-container">
         <h2>{props.title}</h2>
         <p>{props.desc}</p>
-        <Link to="/blog">
+        <Link to="/blog" onClick={() => selectArticle(props.id)}>
           Read More
         </Link>
       </div>
@@ -18,3 +24,5 @@ const BlogCard = (props) => {
 }
 
 export default BlogCard;
+
+//onClick={props.handleClick(props.id)}

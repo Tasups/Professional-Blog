@@ -17,10 +17,13 @@ const Main = (props) => {
         {
           props.blogs?.map((blog) => (
             <BlogCard 
+              key={blog.title}
+              id={blog.id}
               title={blog.title}
               desc={blog.desc}
               img={blog.img}
               alt={blog.img_alt}
+              handleClick={props.handleClick}
             />
           ))
         }

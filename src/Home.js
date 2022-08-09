@@ -1,20 +1,14 @@
-import { useState } from 'react'
-
-import { BLOG_DATA } from './data/blogsData'
-
 import Navbar from './components/Navbar';
 import Main from './components/Main';
 import Contacts from './components/Contacts';
 
-const Home = () => {
-  
-  const [blogs, setBlogs] = useState(BLOG_DATA)
+const Home = (props) => {
   
   return (
     <>
       <div className="App">
         <Navbar />
-        <Main blogs={blogs}/>
+        <Main blogs={props.blogs} handleClick={props.handleClick}/>
         <Contacts />
       </div>
     </>
