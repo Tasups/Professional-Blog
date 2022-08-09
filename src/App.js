@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react'
 import { Routes, Route } from 'react-router-dom'
 
 import './App.css';
+import Navbar from './components/Navbar';
+import Contacts from './components/Contacts';
 import Home from './Home.js'
 import BlogArticle from './components/BlogArticle.js'
 
@@ -18,27 +20,20 @@ function App() {
   
   const blogArticleSelection = (id) => {
     const selectedArticle = blogs.filter(blog => blog.id === id)
-    console.log(selectedArticle)
+    console.log(selectedArticle[0])
     setBlogArticle(selectedArticle[0])
+    console.log(blogArticle)
   }
-  /*
-  const handleTicketClick = (e, id) => {
-    e.preventDefault()
-    const newTicket = tickets.filter(ticket => ticket.id === id)
-    let newTicketForDescription = newTicket[0]
-    setTicketForDescription(newTicketForDescription)
-    let newComment = tickets.filter(ticket => ticket.id === id)
-    let newComments = newComment[0]
-    setComments(newComments.comments)
-    setParentID(id)
-  }
-  */
   
   return (
+    <>
+    <Navbar />
     <Routes>
         <Route path="/" element={ <Home blogs={blogs} handleClick={blogArticleSelection}/> } />
         <Route path="/blog" element={ <BlogArticle blogArticle={blogArticle} /> } />
     </Routes>
+    <Contacts />
+    </>
   );
 }
 
