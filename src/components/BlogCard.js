@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 const BlogCard = (props) => {
   return(
     <section className="blogcard">
@@ -7,7 +9,9 @@ const BlogCard = (props) => {
       <div className="blogcard-desc-container">
         <h2>{props.title}</h2>
         <p>{props.desc}</p>
-        <span>Read More</span>
+        <Link to="/blog">
+          Read More
+        </Link>
       </div>
     </section>
     )

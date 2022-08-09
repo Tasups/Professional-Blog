@@ -1,25 +1,16 @@
-import { useState } from 'react'
+import { Routes, Route } from 'react-router-dom'
 
 import './App.css';
-
-import { BLOG_DATA } from './data/blogsData'
-
-import Navbar from './components/Navbar';
-import Main from './components/Main';
-import Contacts from './components/Contacts';
+import Home from './Home.js'
+import BlogArticle from './components/BlogArticle.js'
 
 function App() {
   
-  const [blogs, setBlogs] = useState(BLOG_DATA)
-  
   return (
-    <>
-      <div className="App">
-        <Navbar />
-        <Main blogs={blogs}/>
-        <Contacts />
-      </div>
-    </>
+    <Routes>
+        <Route path="/" element={ <Home /> } />
+        <Route path="/blog" element={ <BlogArticle /> } />
+    </Routes>
   );
 }
 
