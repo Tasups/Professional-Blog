@@ -1,6 +1,6 @@
 import BlogCard from './BlogCard';
 
-const Main = () => {
+const Main = (props) => {
   return(
     <main className="main">
       <form>
@@ -14,7 +14,16 @@ const Main = () => {
         />
       </form>
       <div>
-        <BlogCard />
+        {
+          props.blogs?.map((blog) => (
+            <BlogCard 
+              title={blog.title}
+              desc={blog.desc}
+              img={blog.img}
+              alt={blog.img_alt}
+            />
+          ))
+        }
       </div>
     </main>
     )

@@ -157,6 +157,8 @@ nav button {
   margin-bottom: 2rem;
   border: 3px solid var(--primary-orange);
   border-radius: 3px;
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.15); 
+  box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.15);
 }
 
 .blogcard-thumbnail {
