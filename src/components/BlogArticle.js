@@ -1,4 +1,5 @@
 const BlogArticle = (props) => {
+
   return(
     <div className="blogarticle-container">
     <main className="blogarticle-main">
@@ -12,6 +13,11 @@ const BlogArticle = (props) => {
       </div>
       <article className="blogarticle-article">
         <h1>{props.blogArticle?.title}</h1>
+        {
+          props.blogArticle?.desc.split("\n").map((paragraph) => (
+            <p>{paragraph}</p>
+          ))
+        }
         <p>{props.blogArticle?.desc}</p>
       </article>
     </main>
