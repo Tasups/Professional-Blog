@@ -304,3 +304,7 @@ nav button {
   color: var(--primary-dark);
   font-size: 2.25rem;
 }
+
+.blogarticle-article p {
+  padding: 0.5rem 0;
+}
