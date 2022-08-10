@@ -12,13 +12,14 @@ const BlogArticle = (props) => {
         />
       </div>
       <article className="blogarticle-article">
+        
         <h1>{props.blogArticle?.title}</h1>
+        <p className="blogarticle-date">{props.blogArticle?.date}</p>
         {
           props.blogArticle?.desc.split("\n").map((paragraph) => (
             <p>{paragraph}</p>
           ))
         }
-        <p>{props.blogArticle?.desc}</p>
       </article>
     </main>
     </div>
