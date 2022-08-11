@@ -4,6 +4,7 @@ const BlogCard = (props) => {
   
   const previewSelection = props.desc.split("\n")
   const previewBlurb = previewSelection[0]
+  const previewSlice = `${previewBlurb.slice(0,400)}...`
   
   const selectArticle = (id) => {
     props.handleClick(id)
@@ -16,7 +17,7 @@ const BlogCard = (props) => {
       </div>
       <div className="blogcard-desc-container">
         <h2>{props.title}</h2>
-        <p>{previewBlurb}</p>
+        <p>{previewSlice}</p>
         <Link to="/blog" onClick={() => selectArticle(props.id)}>
           Read More
         </Link>

@@ -12,6 +12,11 @@ const Main = (props) => {
           placeholder="Search Blogs" 
           required
         />
+        <button
+          type="submit"
+        >
+          Submit
+        </button>
       </form>
       <div>
         {
