@@ -233,7 +233,7 @@ nav {
 .contacts-wrapper {
   display: flex;
   background-color: var(--primary-dark);
-  max-height: 30vh;
+  min-height: 30vh;
   width: 100vw;
 }
 
@@ -259,6 +259,10 @@ nav {
   font-size: 2.5rem;
   color: var(--primary-orange);
   margin-bottom: 1rem;
+}
+
+.contacts-icon-list {
+  padding-bottom: 2rem;
 }
 
 .contact-icon {
@@ -395,4 +399,14 @@ nav {
   color: black;
   border: 0.25rem solid var(--primary-orange);
   border-radius: 0.5rem;
+}
+
+/*----------COMMENTCARD----------*/
+
+.commentcard {
+  background-color: white;
+  border: 3px solid var(--primary-orange);
+  border-radius: 5px;
+  margin-top: 2rem;
+  padding: 1rem;
 }
