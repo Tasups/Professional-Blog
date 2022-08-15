@@ -6,7 +6,8 @@ import { faThumbsUp } from '@fortawesome/free-solid-svg-icons';
 const CommentCard = (props) => {
 
   const { name, date, comment } = props.article;
-  let [countOfLikes, setCountOfLikes] = useState(0)
+  const [countOfLikes, setCountOfLikes] = useState(0)
+  const [isClicked, setIsClicked] = useState(false)
 
   const timestamp = date;
   const humanReadableDateTime = new Date(timestamp).toLocaleString();
@@ -15,6 +16,8 @@ const CommentCard = (props) => {
     if(countOfLikes === 0) {
       setCountOfLikes(countOfLikes => countOfLikes + 1)
     }
+    // I can't get this to work and have tried a few
+    setIsClicked(!isClicked)
   }
 
   return (
@@ -30,7 +33,7 @@ const CommentCard = (props) => {
             onClick={handleClick}
           >
             <FontAwesomeIcon 
-              className="commentcard-icon"
+              className={`commentcard-icon ${isClicked}`}
               icon={faThumbsUp} 
             />
           </button>
