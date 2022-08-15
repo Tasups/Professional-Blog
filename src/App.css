@@ -410,3 +410,37 @@ nav {
   margin-top: 2rem;
   padding: 1rem;
 }
+
+.commentcard-thumbsup-btn {
+  cursor: pointer;
+  border: none;
+}
+
+.commentcard-likescount {
+  background-color: var(--primary-lightgrey);
+  border: black 1px solid;
+  border-radius: 5px;
+  display: flex;
+  
+  width: 5rem;
+}
+
+.commentcard-likescount span {
+  margin-left: 0.75rem;
+}
+
+.commentcard-likescount-offset {
+  margin: 0.3rem 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.commentcard-icon {
+  height: 1.35rem;
+  width: 1.35rem;
+}
+
+.iconClicked {
+  color: var(--primary-orange);
+}
