@@ -22,18 +22,18 @@ const Main = (props) => {
           required
           onChange={searchForBlog}
         />
-        <button
-          type="submit"
-        >
-          Submit
-        </button>
       </form>
       <div>
         {
+          // eslint-disable-next-line
           props.blogs?.filter((val) => {
+          // eslint-disable-next-line
             if (searchTerm === ""){
+            // eslint-disable-next-line
               return val
+              // eslint-disable-next-line
             } else if (val.title.toLowerCase().includes(searchTerm.toLowerCase())) {
+            // eslint-disable-next-line
               return val
             } 
           })?.map((blog) => (
