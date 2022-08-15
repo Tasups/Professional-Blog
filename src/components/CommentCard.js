@@ -1,3 +1,6 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faThumbsUp } from '@fortawesome/free-solid-svg-icons';
+
 const CommentCard = (props) => {
 
   const { name, date, comment } = props.article;
@@ -11,6 +14,9 @@ const CommentCard = (props) => {
         <h3>{name}</h3>
         <h5>{humanReadableDateTime}</h5>
         <p>{comment}</p>
+        <div>
+          <FontAwesomeIcon icon={faThumbsUp} />
+        </div>
       </div>
     </div>
   );

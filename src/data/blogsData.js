@@ -11,6 +11,7 @@ export const BLOG_DATA = [
         id: 1,
         name: "Jason Whisnant",
         date: Date.now(),
+        likes: 0,
         comment:
           "This is a serious question for anyone who is trying to break into the senior positions to consider. CTOs amongst others should start trying to understand the meta now or possibly be left behind. I do watch Primeagen and Firebase for more information on these issues so my knowledge base is from influencers, however, without more contributors breaking through, it becomes difficult to better analyze the actual field of computer languages.",
       },
@@ -18,6 +19,7 @@ export const BLOG_DATA = [
         id: 2,
         name: "Doctor Who",
         date: Date.now(),
+        likes: 0,
         comment:
           "Letting it get to you. You know what that’s called? Being alive. Best thing there is. Being alive right now is all that counts.",
       },
