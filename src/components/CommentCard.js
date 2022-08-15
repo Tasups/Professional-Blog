@@ -10,7 +10,6 @@ const CommentCard = (props) => {
 
   const timestamp = date;
   const humanReadableDateTime = new Date(timestamp).toLocaleString();
-  
  
   const handleClick = () => {
     if(countOfLikes === 0) {
